@@ -25,7 +25,7 @@ SECRET_KEY = '($4l12fpoxw#48ty!w+kgf-v+yv5tx%=iw678+wq^o12m&#sk^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'sanskar-almabetter-challenge.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'sj-almabetter-challenge-api.herokuapp.com']
 
 # Application definition
 
