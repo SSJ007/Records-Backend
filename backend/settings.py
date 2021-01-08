@@ -25,7 +25,7 @@ SECRET_KEY = '($4l12fpoxw#48ty!w+kgf-v+yv5tx%=iw678+wq^o12m&#sk^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'sj-almabetter-challenge-api.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'sj-almabetter-challenge-api.herokuapp.com', 'localhost', "sanskar-almabetter-challenge.herokuapp.com"]
 
 # Application definition
 
@@ -79,23 +79,23 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # LOCAL MYSQL DB
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'student',
-#         'HOST': '127.0.0.1',
-#         'PORT': '3307',
-#         'USER': 'root',
-#         'PASSWORD': 'password',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'student',
+        'HOST': '127.0.0.1',
+        'PORT': '3307',
+        'USER': 'root',
+        'PASSWORD': 'password',
     }
 }
-DATABASES['default'] =  dj_database_url.config()
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+# DATABASES['default'] =  dj_database_url.config()
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
 

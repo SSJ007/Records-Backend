@@ -4,5 +4,5 @@ from assignment import views
 
 urlpatterns = [
     path('api/students', views.StudentListAPIView.as_view() ,name="student"),
-    path('api/student-add', views.StudentAdd ,name="student_add"),
+    path('api/students/<str:pk>', views.StudentDetail.as_view() ,name="student_detail"),
 ]

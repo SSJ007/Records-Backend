@@ -52,11 +52,7 @@ class StudentListAPIView(generics.ListCreateAPIView):
             ).order_by('-total')
     serializer_class = StudentSerializer
 
-@api_view(['POST'])
-def StudentAdd(request):
-    serializer = StudentSerializer(data=request.data)
+class StudentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
 
-    if serializer.is_valid():
-        serializer.save()
-
-    return Response(serializer.data)
